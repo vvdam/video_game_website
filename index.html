@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video_game_liste</title>
+    <style>
+        body{
+            background-image: url(https://lejournal.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/stsci-01gkt0t1pekbte1rc3s4rnga6g_.jpg);
+            width: 100%;
+        }
+        @font-face {
+            font-family: "Ambo";
+            src:url('Amboqia Boriango.otf');
+        }
+        .div{
+            align-items: center;
+            background: rgba( 0, 0, 0, 0.8 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 9.5px );
+            -webkit-backdrop-filter: blur( 9.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            transition: all 0.5s;
+        }
+        .div:hover{
+            background: rgba(105, 100, 100, 0.8);
+            transform: scale(1.2);
+
+        }
+        .page{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-left: 5%;
+            margin-top: 6%;
+        }
+        span{
+            font-size: 2rem;
+            font-weight: 900;
+            font-family: Neue;
+            color: white;
+            position: absolute;
+        }
+
+        .txt{
+            font-size: 18px;
+            color: aliceblue;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 10%;
+            margin-bottom: 20%;
+            width:120px ;
+        }
+        .imgg{
+            width:200px;
+            border-radius: 10px;
+        }
+
+        #carousel{
+            position: absolute;
+            margin-top: 40px;
+            white-space : nowrap;
+            animation: mover 10s linear infinite;
+            display: inline-flex;
+        }
+        
+        @keyframes mover {
+            0%{
+                position: absolute;
+                top: 10vh;
+                left: 100%;
+            }
+            100%{
+                position: absolute;
+                top: 10vh;
+                
+                left: -70%;
+            }
+        }
+
+                /*
+        .txt2{ 
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            font-size: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-left: 20%;
+            margin-bottom: 20%;
+
+        }
+        */
+
+    </style>
+</head>
+<body >
+    <div>
+        <h1 style="color: aliceblue;margin-left: 10%;margin-top: 5%;font-family:Ambo;">Game Liste with API</h1>
+    </div>
+    <div id="carousel" >
+        <span style="color: antiquewhite;">Welcome Here, voici un site usant une API répertoriant une liste de jeux vidéo</span>
+    </div>
+        <div class="page"> 
+    </div> 
+    <script src="javascript.js"></script>
+    <!-- <div class="page">
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop0" src="" width="300">
+        <p class="txt style="margin-left: 40%;" id="name0"></p>
+
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop1" src="" width="300">
+        <p class="txt" id="name1"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop2" src="" width="300">
+        <p class="txt" id="name2"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop3" src="" width="300">
+        <p class="txt" id="name3"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop4" src="" width="300">
+        <p class="txt" id="name4"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop5" src="" width="300">
+        <p class="txt" id="name5"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop6" src="" width="300">
+        <p class="txt" id="name6"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop7" src="" width="300">
+        <p class="txt" id="name7"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop8" src="" width="300">
+        <p class="txt" id="name8"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop9" src="" width="300">
+        <p class="txt" id="name9"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop10" src="" width="300">
+        <p class="txt" id="name10"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop11" src="" width="300">
+        <p class="txt" id="name11"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop12" src="" width="300">
+        <p class="txt" id="name12"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop13" src="" width="300">
+        <p class="txt" id="name13"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop14" src="" width="300">
+        <p class="txt" id="name14"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop15" src="" width="300">
+        <p class="txt" id="name15"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop16" src="" width="300">
+        <p class="txt" id="name16"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop17" src="" width="300">
+        <p class="txt" id="name17"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop18" src="" width="300">
+        <p class="txt" id="name18"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop19" src="" width="300">
+        <p class="txt" id="name19"></p>
+        </div>
+        
+        <div class="div">
+        <img style="border-radius: 10px;"id="lop20" src="" width="300">
+        <p class="txt" id="name20"></p>
+        </div>
+
+        <div class="div">
+            <img style="border-radius: 10px;"id="lop21" src="" width="300">
+            <p class="txt" id="name21"></p>
+    </div> -->
+
+    
+</body>
+</html>
